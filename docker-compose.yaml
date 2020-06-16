@@ -1,0 +1,13 @@
+version: '2'
+services:
+    web:
+        build:
+            context: ./
+            dockerfile: _docker/web.docker
+        volumes:
+            - ./:/var/www/html
+        ports:
+            - "8097:8080"
+
+volumes:
+    dbdata:
